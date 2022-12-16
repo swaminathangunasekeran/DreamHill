@@ -1,0 +1,239 @@
+@import "../../../scss/main";
+
+.hide {
+    visibility: hidden;
+}
+.carousalImage{
+    min-height: 80vh;
+    background-color: $lightBackground;
+    
+}
+
+.animateBottom {
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    z-index: 10;
+}
+
+.animateTop {
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    z-index: 10;
+}
+
+@keyframes opacity {
+
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+.home {
+    position: relative;
+    width: 100%;
+    height: auto;
+    // margin-top: 10%;
+   // border-bottom: 1px solid $darkGrey;
+    padding-bottom: 10px;
+    overflow: hidden;
+    @include mq(xs){
+        height: 200px;
+    }
+    .banner{
+        // background-image: url("../../svg/about.jpeg");
+        // height: 200vh;
+        // width: 100%;
+        //         /* Set a specific height */
+        // min-height: 500px; 
+
+        // /* Create the parallax scrolling effect */
+        // background-attachment: fixed;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+    }
+    .profile {
+        display: flex;
+        justify-content: center;
+        @include mq(xs) {
+            display: block;
+        }
+
+        @include mq(sm) {
+            display: block;
+        }
+
+        .profileDesc {
+            flex: 1;
+
+            .desc {
+                margin: 8% 20%;
+                line-height: 40px;
+                font-family: $avenirMed;
+                font-size: 1.5rem;
+                background: $lightRed;
+                padding: 10px;
+                font-weight: bold;
+                @include mq(xs) {
+                    margin: 0 auto;
+                    width: 80%;
+                }
+
+                @include mq(sm) {
+                    margin: 0 auto;
+                    width: 80%;
+                }
+            }
+        }
+
+        .menu {
+            flex: 1 1;
+            align-items: center;
+            margin-top: 15%;
+
+            @include mq(xs) {
+                display: none;
+            }
+
+            @include mq(sm) {
+                display: none;
+            }
+
+            .menuList {
+                cursor: pointer;
+
+                .menuItem {
+                    display: block;
+                    font-family: $avenirBold;
+                    position: relative;
+                    margin-bottom: 70px;
+                    text-decoration: none;
+                    color: $mainRed;
+                    height: 30px;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    align-items: center;
+                    display: flex;
+                    letter-spacing: 4px;
+
+                    @include mq(xs) {
+                        display: none;
+                    }
+
+                    @include mq(sm) {
+                        display: flex;
+                    }
+
+                    a {
+                        margin-right: 10px;
+                    }
+
+                    img {
+                        display: none;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+
+                        >img {
+                            display: block;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .leafGreen {
+        position: absolute;
+        top: -10%;
+        left: -5%;
+        z-index: -1;
+
+        @include mq(xs) {
+            top: -20%;
+            left: -5%;
+        }
+
+        @include mq(sm) {
+            top: -40%;
+            left: -10%;
+        }
+
+        @include mq(md) {
+            top: -20%;
+            left: -5%;
+        }
+    }
+
+    .leafRed {
+        position: absolute;
+        bottom: -20%;
+        right: 0%;
+        z-index: -1;
+        @include mq(xs) {
+           display: none;
+        }
+
+        @include mq(sm) {
+            display: none;
+        }
+
+        @include mq(md) {
+            bottom: -15%;
+            right: -10%;
+        }
+    }
+
+    .heading {
+        font-size: 3.5rem;
+        letter-spacing: 10px;
+        color: $darkGrey;
+        position: relative;
+        margin-top: 0%;
+        line-height: 80px;
+        font-family: $avenirBold;
+        text-align: left;
+        margin-left: 10%;
+        margin-bottom: 0px;
+        display: flex;
+        span{
+            color: $mainRed
+        }
+        @include mq(xs) {
+            font-size: 2.8rem;
+            margin-left: 10%;
+        }
+
+        @include mq(sm) {
+            font-size: 3.5rem;
+            margin-left: 20%;
+            margin-left: 10%;
+        }
+
+        @include mq(md) {
+            font-size: 3.5rem;
+            margin-left: 10%;
+        }
+
+    }
+}

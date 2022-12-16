@@ -1,0 +1,90 @@
+@import "../../../scss/main";
+.imageOne{
+ width: 100%;
+ height: auto;
+ background-size: cover;
+.imageHidden{
+  height: auto;
+  visibility: hidden;
+}
+}
+.imageTwo{
+  width: 100%;
+  height: 80vh;
+  background-size: 100% 100%;
+ .imageHidden{
+   height: auto;
+   visibility: hidden;
+ }
+}
+
+.viewGallery{
+  position: absolute;
+  bottom: 40%;
+  right: 20px;
+  @include mq(xs) {
+    bottom: 20%;
+    right: 20px;
+  }
+}
+.button{
+  background-color: $mainRed;
+  color: white;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  border: 1px solid $mainRed;;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+  &:disabled {
+    color: grey;
+    opacity: 0.7;
+    cursor: default;
+  }
+}
+.arrowImage{
+  width: 50px;
+    position: absolute;
+    display: none;
+    left: 48%;
+    bottom: 10%;
+    cursor: pointer;
+    z-index: 999;
+    @include mq(sm) {
+     bottom: 20%;
+    
+  }
+  @include mq(lg) {
+    display: block;
+     bottom:33%;
+  }
+  @include mq(md) {
+    display: block;
+    bottom: 10%;
+ }
+}
+
+.arrowImageTwo{
+  width: 50px;
+  position: absolute;
+  display: none;
+  left: 48%;
+  bottom: 2%;
+  cursor: pointer;
+  z-index: 999;
+  @include mq(sm) {
+   bottom: 20%;
+  
+}
+@include mq(lg) {
+  display: block;
+  bottom: 2%;
+}
+@include mq(md) {
+  display: block;
+  bottom: 10%;
+}
+}

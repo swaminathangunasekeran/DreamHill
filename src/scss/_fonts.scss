@@ -1,0 +1,18 @@
+/****** Font Imports ******/
+
+@font-face {
+    font-family: 'Avenir Next Medium';
+    src: url('../../public/fonts/avenir-next-regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avenir Next Bold';
+    src:
+        url('../../public/fonts/AvenirNext-Medium.woff2') format('woff2'),
+        url('../../public/fonts/AvenirNext-Medium.woff') format('woff');
+}
+
+/****** Font Declarations ******/
+
+$avenirMed: "Avenir Next Medium", sans-serif;
+$avenirBold: "Avenir Next Bold", sans-serif;
+$quattro: "Quattrocento", serif;

@@ -1,0 +1,115 @@
+@import "../../../scss/main";
+.mobileMenu.menu{
+    visibility: visible;
+    @include mq(xs){
+        visibility: hidden;
+    }
+}
+.menu{
+    background: transparent;
+    font-family: $avenirMed;
+    z-index: 999;
+    position: fixed;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    width:100%;
+    @include mq(xs){
+        visibility: hidden;
+    }
+    .logo{
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        cursor: pointer;
+        left: 5%;
+        @include mq(xs){
+            top: 80%;
+        }
+    }
+    .mobileLogo{
+        @include mq(xs){
+            top: 80%;
+            display: none;
+        }
+        @include mq(sm){
+            top: 80%;
+            display: block;
+        }
+         @include mq(lg) {
+            display: block;
+            top: 0%;
+         }
+         @include mq(md) {
+            display: block;
+            top: 0%;
+         }
+
+
+    }
+   
+    .menuhover{
+            box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+            background-color: $lightBackground;
+            height: 90px;
+            z-index: 999;
+            color: $darkGrey;
+            .menuItem{
+                color: $darkGrey !important; 
+            }
+            .phone{
+                color: $darkGrey !important; 
+    
+            } 
+        }
+
+    .menuList{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        color:  $lightBackground;
+        padding: 0px;
+        margin: 0px;
+        .menuItem{
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 30px 30px;
+            color: $lightBackground;
+            span{
+                font-size: 2.4rem;
+                text-decoration: none;
+            }
+            @include mq(xs){
+                padding: 30px 0px;
+            }
+
+             @include mq(sm) {
+                font-size: 1rem;
+             }
+             @include mq(md) {
+                font-size: 1rem;
+             }
+        }
+        .phone{
+            color: $lightBackground;
+
+        } 
+
+
+        .menuItemhover,.menuItem:hover{
+            background-color:$mainRed;
+            color:  $lightBackground !important;
+            @include mq(xs){
+                background-color: $lightBackground !important; 
+                color: $mainRed !important;
+            }
+            .phone{
+                background-color: $lightBackground !important; 
+                color: $mainRed !important;
+            }
+
+        }
+    }
+}
+

@@ -1,0 +1,18 @@
+.arrowImage{
+    width: 50px;
+      position: absolute;
+    
+      left: 48%;
+      bottom: 10%;
+      @include mq(sm) {
+       bottom: 20%;
+    }
+    @include mq(lg) {
+  
+       bottom:30%;
+    }
+    @include mq(md) {
+  
+      bottom: 10%;
+   }
+  }

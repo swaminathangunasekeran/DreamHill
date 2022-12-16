@@ -1,0 +1,50 @@
+@import "../../../scss/main";
+.contactDiv{
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Avenir Next Medium", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    div{
+        flex: 1 1 30%;
+        text-align: right;
+        b{
+            // margin-right: 6%;
+        }
+        p{
+            font-weight: bold;
+        }
+    }
+    .socialMedia{
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        display: flex;
+        @include mq(xs){
+            top: -50%;
+        }
+        div{
+            margin-bottom: 20px;
+            margin-left: 10px;
+            a img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .information{
+
+    }
+    .phone{
+        text-align: center;
+    }
+    .address{
+        text-align: center;
+    }
+
+}

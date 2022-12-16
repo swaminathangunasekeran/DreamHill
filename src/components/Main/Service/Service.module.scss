@@ -1,0 +1,60 @@
+@import "../../../scss/main";
+.serviceContainer{
+    padding-bottom: 50px;
+    @include mq(xs){
+        padding-bottom: 10px;
+    }
+    .serviceHeaderText{
+        font-size: 3rem;
+        position: absolute;
+        opacity: 0;
+        left: 1%;
+        top: 20%;
+        @include mq(xs){
+            font-size: 2rem;
+        }
+    }
+    .logoAnimation{
+        position: fixed !important;
+        opacity: 0.5 !important;
+        transition: all 3s;
+     }
+    .serviceDiv{
+        display: flex;
+        margin-top: 70px;
+        flex-wrap: wrap;
+        .services{
+            flex: 1 1 30%;
+            @include mq(md){
+                flex: 1 1 50%;
+            }
+            @include mq(sm){
+                flex: 1 1 50%;
+            }
+            @include mq(xs){
+                flex: 1 1 80%;
+            }
+            .serviceHeader{
+                text-align: center;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .description{
+                padding: 10px 80px;
+                line-height: 2.2em;
+                font-size: 1.2rem;
+                max-height: 200px;
+                overflow: hidden;
+                @include mq(xs) {
+                    line-height: 1.8em;
+                    padding: 10px 5px;
+                    font-size: 1rem;
+                }
+                
+            }
+        }
+    
+    }
+}

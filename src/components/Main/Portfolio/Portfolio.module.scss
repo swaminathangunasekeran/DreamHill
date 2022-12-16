@@ -1,0 +1,152 @@
+@import "../../../scss/main";
+
+.protfolioContainer{
+    max-height: 300vh;
+    display: flex;
+    overflow: hidden;
+    font-family: "Avenir Next Medium", sans-serif;
+    position: relative;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 200px;
+    @include mq(xs){
+        padding: 0;
+        padding-bottom: 200px;
+    }
+    .portfolioHeader{
+        font-size: 3rem;
+        position: absolute;
+        opacity: 0;
+        left: 1%;
+        top: 20%;
+        @include mq(xs){
+            font-size: 2rem;
+        }
+    }
+    .logoAnimation{
+        position: fixed !important;
+        opacity: 0.5 !important;
+        transition: all 3s;
+     }
+}
+
+.projectList{
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-direction: row;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    margin: 0 4%;
+    @include mq(xs){
+        grid-template-columns: auto ;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .projects{
+        display: flex;
+        padding: 7% 10px;
+        cursor: pointer;
+        overflow: hidden;
+        flex-direction: column;
+        flex:1;
+        align-items: center;
+        margin: 8% 4%;
+        box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+        border-radius: 3%;
+        margin-bottom: 0%;
+        transition: background-color 1s ease;
+        .footer{
+            height: 50px;
+            display: flex;
+            /* margin: 0 auto; */
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 100%;
+            @include mq(xs){
+                height: 40px;
+                justify-content: center;
+            }
+        }
+        &:hover{
+            background-color: $lightGreen;
+            border-radius: 3%;
+           .imageHeader{
+               color: $lightBackground;
+               text-decoration: underline;
+           }
+           img{
+            transform: scale(0.9);
+           }
+       }
+
+
+    img{
+        width: 80%;
+        height: auto;
+        max-height: 300px;
+        margin: 0px;
+        border-radius: 3%;
+        transition: transform 2s;
+        @include mq(xs){
+            width: 100%;
+        }
+  
+    }
+    .description{
+        width: 90%;
+        height: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        @include mq(xs){
+            width: 100%;
+        }
+        .imageHeader{
+            font-size: 2rem;
+            margin: 10px 0 0 0;
+            text-align: center;
+            margin-left: 10px;
+            @include mq(xs){
+                font-size: 1rem;
+            }
+        }
+        .descriptionText{
+            font-size: 1.2rem;
+            font-family: "Avenir Next Medium", sans-serif;
+            line-height: 2.2em;
+            @include mq(xs){
+                font-size: 1rem;
+                line-height: 1.8em;
+            }
+        }
+
+    }
+
+    .learnMore{
+        color: $lightBackground;
+        background-color: $mainRed;
+        padding: 20px;
+        margin: 0 10px;
+        display: block;
+        line-height: 10px;
+        justify-content: flex-end;
+        text-decoration: none;
+        transition: transform .2s;
+        @include mq(xs){
+            padding:14px 20px;
+           
+        }
+    }
+    .learnMore{
+
+        &:hover{
+            transform: scale(0.9);
+            text-decoration: underline;
+        }
+    }
+    }
+}

@@ -1,0 +1,31 @@
+@import "mixins";
+@import "fonts";
+@import "colors";
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    @include mq(xs) {
+        position:relative;
+        overflow-y: scroll;
+    }
+    @include mq(sm) {
+        position:relative;
+        overflow-y: scroll;
+    }
+    @include mq(md) {
+        position:relative;
+        overflow-y: scroll;
+    }
+    #root{
+        height: 100%;
+    }
+}

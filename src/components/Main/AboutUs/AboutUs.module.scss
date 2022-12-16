@@ -1,0 +1,132 @@
+@import "../../../scss/main";
+
+
+
+
+.hide {
+
+    opacity: 0;
+}
+
+
+
+.aboutusContainer{
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    font-family: $avenirMed;
+    position: relative;
+    // border-bottom: 1px solid $darkGrey;
+    margin-top: 10%;
+    flex-direction: column;
+    @include mq(lg) {
+        flex-direction: row; 
+    }
+    @include mq(md) {
+        flex-direction: row; 
+    }
+
+    
+
+    .heading{
+        position: relative;
+        color: $lightBackground;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .aboutUS{
+        background-color: $lightBackground;
+        height: auto;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        //background-image: url("../../svg/about.jpeg");
+        .logoAnimation{
+            position: fixed !important;
+            //opacity: 1!important;
+            transition: all 3s;
+         }
+        .aboutHeader{
+            font-size: 3rem;
+            position: absolute;
+            opacity: 1;
+            left: 1%;
+            bottom: 50%;
+            @include mq(xs){
+                font-size: 2rem;
+            }
+            .firstHalf{
+                color:$darkGrey;
+            }
+            .secondHalf{
+                color:$darkGrey;
+            }
+        }
+        .aboutImg{
+            border-radius: 0%;
+            width: 80%;
+            height:80vh;
+            cursor: pointer;
+            @include mq(xs) {
+                width: 70%;
+                height: 50vh;
+            }
+            @include mq(sm) {
+                width: 40%;
+                height: 40vh;
+            }
+        }
+    }
+    .aboutUSContent{
+        background-color: $lightBackground;
+        flex:2 1;
+        margin: 0 50px;
+        @include mq(xs) {
+            margin: 0 0px;
+        }
+        @include mq(lg) {
+            margin: 0 0px;
+        }
+        @include mq(md) {
+            margin: 0 0px;
+        }
+        h6{
+            font-size: 12px;
+        }
+        p{
+            font-family: $avenirMed;
+            font-size: 1.2rem;
+            margin: 0% 1%;
+            color: $darkGrey;
+            line-height: 2.3em;
+            @include mq(xs) {
+                line-height: 1.8em;
+                font-size: 1rem;
+            }
+        }
+    }
+    .arrowImage{
+        width: 50px;
+          position: absolute;
+        
+          left: 48%;
+          bottom: 10%;
+          display: none;
+          cursor: pointer;
+          @include mq(sm) {
+           bottom: 10%;
+
+        }
+        @include mq(lg) {
+            display: block;
+           bottom:10%;
+        }
+        @include mq(md) {
+            display: block;
+          bottom: 10%;
+       }
+    }
+}
