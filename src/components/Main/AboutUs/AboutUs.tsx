@@ -75,7 +75,7 @@ export const AboutUs = () => {
                     </>
 
                 }
-                <div onClick={() => navigate("portfolioContainer")} className={style.arrowImage}>
+                <div onClick={() => navigate("serviceContainer")} className={style.arrowImage}>
                     <img src={Arrow} alt="" />
                 </div>
             </section>

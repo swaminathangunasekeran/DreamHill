@@ -13,6 +13,11 @@
         @include mq(xs){
             font-size: 2rem;
         }
+        .serviceTitle{
+            @include mq(xs){
+                font-size: 2rem;
+            }
+        }
     }
     .logoAnimation{
         position: fixed !important;
@@ -45,12 +50,16 @@
                 padding: 10px 80px;
                 line-height: 2.2em;
                 font-size: 1.2rem;
-                max-height: 200px;
+                max-height: 230px;
+                font-family: "Avenir Next Medium", sans-serif;
                 overflow: hidden;
                 @include mq(xs) {
-                    line-height: 1.8em;
-                    padding: 10px 5px;
-                    font-size: 1rem;
+                    line-height: 2.4em;
+                    padding: 10px 30px;
+                    font-size: 1.2rem;
+                }
+                @include mq(sm){
+                    padding: 10px 60px;
                 }
                 
             }

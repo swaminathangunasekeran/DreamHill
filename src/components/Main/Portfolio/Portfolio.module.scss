@@ -1,7 +1,7 @@
 @import "../../../scss/main";
 
 .protfolioContainer{
-    max-height: 300vh;
+    // max-height: 300vh;
     display: flex;
     overflow: hidden;
     font-family: "Avenir Next Medium", sans-serif;
@@ -9,12 +9,14 @@
     margin-top: 5%;
     flex-wrap: wrap;
     flex-direction: column;
-    height: auto;
+    min-height: 120vh;
     padding: 20px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     @include mq(xs){
         padding: 0;
-        padding-bottom: 200px;
+    }
+    @include mq(sm){
+        min-height: 40vh;
     }
     .portfolioHeader{
         font-size: 3rem;
@@ -60,6 +62,9 @@
         border-radius: 3%;
         margin-bottom: 0%;
         transition: background-color 1s ease;
+        @include mq(xs){
+            margin-bottom: 20%;
+        }
         .footer{
             height: 50px;
             display: flex;
@@ -111,7 +116,7 @@
             text-align: center;
             margin-left: 10px;
             @include mq(xs){
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
         .descriptionText{
@@ -119,7 +124,7 @@
             font-family: "Avenir Next Medium", sans-serif;
             line-height: 2.2em;
             @include mq(xs){
-                font-size: 1rem;
+                font-size: 1.2rem;
                 line-height: 1.8em;
             }
         }

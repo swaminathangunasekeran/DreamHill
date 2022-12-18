@@ -48,7 +48,7 @@ const Service = () => {
                         <div className={style.services} key={`Service-${index}-${service.title}`}>
                             <div className={style.serviceHeader}>
                                 <img alt={service.title} src={service.img.url}></img>
-                                <h3>{service.title}</h3>
+                                <h3 className={style.serviceTitle}>{service.title}</h3>
                             </div>
                             <p className={style.description}>
                                 {service.description}

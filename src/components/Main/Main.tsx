@@ -14,10 +14,10 @@ function Main() {
     <>
     <NavProvider>
       <Nav/>
-      <Home/>
+      <Home/> 
       <AboutUs/>
       <Service/>
-      <Portfolio/>
+       <Portfolio/>
       <Contact/>
     </NavProvider>
     </>

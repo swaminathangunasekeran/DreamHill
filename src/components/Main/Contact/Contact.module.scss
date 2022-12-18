@@ -1,4 +1,7 @@
 @import "../../../scss/main";
+.contact{
+    overflow: hidden;
+}
 .contactDiv{
     height: 12vh;
     display: flex;
@@ -9,10 +12,24 @@
     margin: 0 auto;
     position: fixed;
     bottom: 0px;
-    background: rgba(255, 255, 255, 0.9);
+    background: $lightBackground;
+    @include mq(xs){
+        flex-direction: column;
+        position: relative;
+        height: auto;
+    }
+    @include mq(sm){
+        position: relative;
+        height: auto;
+    }
     div{
         flex: 1 1 30%;
         text-align: right;
+        @include mq(xs){
+            text-align: center;
+            width: 100%;
+            border-bottom: 1px dotted #000;
+        }
         b{
             // margin-right: 6%;
         }
@@ -21,19 +38,26 @@
         }
     }
     .socialMedia{
-        position: absolute;
-        top: 10%;
+        top:30%;
         left: 0%;
         display: flex;
         @include mq(xs){
-            top: -50%;
+            justify-content: space-evenly;
+            width: 100%;
+  
         }
         div{
             margin-bottom: 20px;
-            margin-left: 10px;
+            margin-left: 20%;
+            margin-top: 30px;
+            @include mq(xs){
+                margin-bottom: 0px;
+                margin-left: 0%;
+                margin-top: 0px;
+            }
             a img{
-                width: 30px;
-                height: 30px;
+                width: 50px;
+                height: 50px;
             }
         }
     }

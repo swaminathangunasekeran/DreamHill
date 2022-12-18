@@ -3,10 +3,30 @@
 .hide {
     visibility: hidden;
 }
+
+.fixed{
+    position: fixed !important;
+}
 .carousalImage{
     min-height: 80vh;
-    background-color: $lightBackground;
-    
+    background-color: $lightBackground;    
+}
+.menu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+    @include mq(xs){
+        display: block;
+    }
+    @include mq(sm){
+        display: block;
+    }
+
 }
 
 .animateBottom {
@@ -55,7 +75,7 @@
     padding-bottom: 10px;
     overflow: hidden;
     @include mq(xs){
-        height: 200px;
+        height: 100vh;
     }
     .banner{
         // background-image: url("../../svg/about.jpeg");

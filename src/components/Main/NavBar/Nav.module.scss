@@ -1,9 +1,42 @@
 @import "../../../scss/main";
 .mobileMenu.menu{
     visibility: visible;
+}
+
+.hidemobile{
     @include mq(xs){
-        visibility: hidden;
+        display: none;
     }
+}
+
+.hidedesktop{
+    display: none;
+    @include mq(xs){
+        display: block;
+    }
+}
+.mobileLogo{
+
+    top: -13px;
+    left: 0px;
+    z-index: 9;
+    width: 100%;
+    height: 140px;
+    background-color: $lightBackground;
+    // @include mq(sm){
+    //     top: 80%;
+    //     display: block;
+    // }
+    //  @include mq(lg) {
+    //     display: block;
+    //     top: 0%;
+    //  }
+    //  @include mq(md) {
+    //     display: block;
+    //     top: 0%;
+    //  }
+
+
 }
 .menu{
     background: transparent;
@@ -14,46 +47,31 @@
     padding: 0px;
     margin: 0px;
     width:100%;
-    @include mq(xs){
-        visibility: hidden;
-    }
+    // @include mq(xs){
+    //     visibility: hidden;
+    // }
     .logo{
         width: 90px;
         height: 90px;
         position: absolute;
         cursor: pointer;
+        color: $lightBackground;
         left: 5%;
         @include mq(xs){
             top: 80%;
+            position: relative;
         }
-    }
-    .mobileLogo{
-        @include mq(xs){
-            top: 80%;
-            display: none;
-        }
-        @include mq(sm){
-            top: 80%;
-            display: block;
-        }
-         @include mq(lg) {
-            display: block;
-            top: 0%;
-         }
-         @include mq(md) {
-            display: block;
-            top: 0%;
-         }
-
 
     }
-   
     .menuhover{
             box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
             background-color: $lightBackground;
             height: 90px;
             z-index: 999;
             color: $darkGrey;
+            @include mq(xs){
+                height: auto;
+            }
             .menuItem{
                 color: $darkGrey !important; 
             }
@@ -63,6 +81,7 @@
             } 
         }
 
+
     .menuList{
         display: flex;
         justify-content: space-around;
@@ -70,6 +89,12 @@
         color:  $lightBackground;
         padding: 0px;
         margin: 0px;
+        @include mq(xs){
+            flex-direction: column;
+            background-color: $lightBackground;
+            color: $darkGrey;
+            grid-template-columns: auto auto;
+        }
         .menuItem{
             font-size: 1.2rem;
             font-weight: bold;
@@ -81,7 +106,10 @@
                 text-decoration: none;
             }
             @include mq(xs){
-                padding: 30px 0px;
+                color: $darkGrey;
+                text-align: center;
+                padding: 40px 30px;
+                border-bottom: 1px dotted $darkGrey;
             }
 
              @include mq(sm) {
@@ -93,6 +121,9 @@
         }
         .phone{
             color: $lightBackground;
+            @include mq(xs){
+                color: $darkGrey;
+            }
 
         } 
 
