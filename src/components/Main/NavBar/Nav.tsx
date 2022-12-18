@@ -80,7 +80,7 @@ export const Nav = () => {
                 </div>
             }
 
-            { activeNavLinkId !== 'home' &&
+            {(MobileView || isMobile) &&  activeNavLinkId !== 'home' &&
                 <img className={cx(style.mobileLogo)} src={Logo} alt="logo fd" onClick={() => navHome()} />
 
             }

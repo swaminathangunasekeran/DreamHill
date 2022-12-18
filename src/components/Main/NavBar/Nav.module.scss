@@ -97,6 +97,9 @@
             color: $darkGrey;
             grid-template-columns: auto auto;
         }
+        li:nth-child(2){
+            margin-top: 40px;
+        }
         .menuItem{
             font-size: 1.2rem;
             font-weight: bold;
