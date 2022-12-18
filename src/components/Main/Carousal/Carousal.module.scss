@@ -83,14 +83,13 @@
   z-index: 999;
   @include mq(sm) {
    bottom: 20%;
-  
-}
-@include mq(lg) {
-  display: block;
-  bottom: 2%;
-}
-@include mq(md) {
-  display: block;
-  bottom: 10%;
-}
+  }
+  @include mq(lg) {
+    display: block;
+    bottom: 2%;
+  }
+  @include mq(md) {
+    display: block;
+    bottom: 10%;
+  }
 }

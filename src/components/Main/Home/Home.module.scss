@@ -75,7 +75,7 @@
     padding-bottom: 10px;
     overflow: hidden;
     @include mq(xs){
-        height: 100vh;
+        height:80vh;
     }
     .banner{
         // background-image: url("../../svg/about.jpeg");

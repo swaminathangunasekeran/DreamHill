@@ -39,7 +39,7 @@ export const CarousalImage: FC<homePageType> = ({ carousalImages }) => {
         <>
             {carousalImages &&
                 <>
-                    <Carousel stopOnHover={false} autoPlay infiniteLoop showThumbs={false} showStatus={false} swipeable>
+                    <Carousel interval={8000} stopOnHover={false} autoPlay infiniteLoop showThumbs={false} showStatus={false} swipeable={true} emulateTouch={true}>
                         {carousalImages.map((carousal, index) =>
                             <div key={index} className={style.imageOne} style={{ backgroundImage: `url(${carousal.url})` }}>
                                 <img className={style.imageHidden} src={carousal.url}></img>
